@@ -1,12 +1,30 @@
 {
-    "version":2,
-    "builds":[
-        {"src":"index.js", "use":"@vercel/node"}
-    ],
-    "routes":[
+    "version": 2,
+    "builds": [
         {
-            "src":"/(.*)",
-            "dest":"/"
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/index.js"  // This directs API calls to your index.js file
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"  // This directs all other requests to index.js
+        }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self';"
+                }
+            ]
         }
     ]
 }
