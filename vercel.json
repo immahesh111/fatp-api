@@ -1,9 +1,16 @@
 {
     "version": 2,
     "builds": [
-        { "src": "index.js", "use": "@vercel/node" }
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "index.js"
+        },
         {
             "src": "/(.*)",
             "dest": "/"
@@ -15,7 +22,7 @@
             "headers": [
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https://your-image-source.com; connect-src 'self' https://your-api-endpoint.com;"
+                    "value": "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self';"
                 }
             ]
         }
