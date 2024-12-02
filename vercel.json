@@ -9,11 +9,11 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "/index.js"  // This directs API calls to your index.js file
+            "dest": "/index.js"
         },
         {
             "src": "/(.*)",
-            "dest": "/index.js"  // This directs all other requests to index.js
+            "dest": "/index.js"
         }
     ],
     "headers": [
