@@ -17,7 +17,7 @@ const app = express();
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
-            defaultSrc: ["'self'", 'https://vercel.live'], // Allow resources from your own domain and Vercel
+            defaultSrc: ["'self'"], // Allow resources only from your own domain
             scriptSrc: ["'self'", 'https://vercel.live', "'unsafe-inline'"], // Allow scripts from your domain and Vercel
             styleSrc: ["'self'", 'https://fonts.googleapis.com'], // Allow styles from your domain and Google Fonts
             imgSrc: ["'self'", 'data:', 'https://your-image-source.com'], // Adjust as needed
