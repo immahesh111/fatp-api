@@ -1,6 +1,6 @@
 import express from 'express'
 import authMiddleware from '../middleware/authMiddleware.js'
-import { addLeave, getLeave, getLeaves, getLeaveDetail, updateLeave } from '../controllers/leaveController.js'
+import { addLeave, getLeave, getLeaves, getLeaveDetail, updateLeave } from '../controllers/leaveController1.js'
 
 
 const router1 = express.Router()
