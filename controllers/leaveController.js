@@ -3,10 +3,10 @@ import Employee from '../models/Employee.js';
 
 const addLeave = async (req, res) => {
     try {
-        const { date, shift, rawMaterialStorage, solderPasteManagement, loaderManagement, gkgPrinterManagement, spiManagement, pickAndPlaceManagement } = req.body;
+        const { date, shift, rawMaterialStorage } = req.body;
 
         // Check for required fields
-        if (!date || !shift || !rawMaterialStorage || !solderPasteManagement || !loaderManagement || !gkgPrinterManagement || !spiManagement || !pickAndPlaceManagement) {
+        if (!date || !shift || !rawMaterialStorage) {
             return res.status(400).json({ success: false, error: "All fields are required." });
         }
 
@@ -27,11 +27,6 @@ const addLeave = async (req, res) => {
             date,
             shift,
             rawMaterialStorage,
-            solderPasteManagement,
-            loaderManagement,
-            gkgPrinterManagement,
-            spiManagement,
-            pickAndPlaceManagement,
         });
 
         await newLeave.save();
