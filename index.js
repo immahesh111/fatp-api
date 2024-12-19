@@ -8,6 +8,7 @@ import employeeRouter from './routes/employee.js';
 import leaveRouter from './routes/leave.js';
 import leaveRouter1  from './routes/leave1.js'
 import leaveRouter2  from './routes/leave2.js'
+import leaveRouter3  from './routes/leave3.js'
 import settingRouter from './routes/setting.js';
 import dashboardRouter from './routes/dashboard.js';
 // import formTemplateRouter from './routes/formTemplate.js'
@@ -49,6 +50,7 @@ app.use('/api/employee', employeeRouter);
 app.use('/api/leave', leaveRouter);
 app.use('/api/leave1',leaveRouter1)
 app.use('/api/leave2',leaveRouter2)
+app.use('/api/leave3',leaveRouter3)
 app.use('/api/setting', settingRouter);
 app.use('/api/dashboard', dashboardRouter);
 // app.use('/api/form-templates', formTemplateRouter);
