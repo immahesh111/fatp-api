@@ -19,6 +19,7 @@ const leaveSchema2 = new Schema({
         question2: { type: String },
         question3: { type: String },
         question4: { type: String },
+        question5: { type: String },
     },
 });
 
