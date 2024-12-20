@@ -99,8 +99,17 @@ const getLeaveDetail = async (req, res) => {
 const updateLeave = async (req, res) => {
     try {
         const { id } = req.params;
+        const { status, approver } = req.body;
         
-        const leave = await Leave2.findByIdAndUpdate(id, { status: req.body.status }, { new: true });
+        const leave = await Leave.findByIdAndUpdate(
+            id,
+            { 
+                status,
+                approver, // Save approver's name here
+                updatedAt: Date.now() // Update timestamp
+            },
+            { new: true } // Return the updated document
+        );
         
         if (!leave) {
             return res.status(404).json({ success: false, error: "Leave not found" });
