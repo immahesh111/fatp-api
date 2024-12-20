@@ -12,6 +12,7 @@ const leaveSchema = new Schema({
     },
     appliedAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
+    approver:{ type : String},
 
     // Raw Material Storage Questions
     rawMaterialStorage: {
