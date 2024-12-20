@@ -101,7 +101,7 @@ const updateLeave = async (req, res) => {
         const { id } = req.params;
         const { status, approver } = req.body;
         
-        const leave = await Leave.findByIdAndUpdate(
+        const leave = await Leave2.findByIdAndUpdate(
             id,
             { 
                 status,
