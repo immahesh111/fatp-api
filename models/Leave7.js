@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-const leaveSchema6 = new Schema({
+const leaveSchema7 = new Schema({
     employeeId: { type: Schema.Types.ObjectId, ref: "Employee", required: true },
     shift: { type: String, required: true }, // Added shift field
     date: { type: Date, required: true }, // Assuming you want to keep track of the date
@@ -21,8 +21,9 @@ const leaveSchema6 = new Schema({
         question3: { type: String },
         question4: { type: String },
         question5: { type: String },
+        question6: { type: String },
     },
 });
 
-const Leave6 = mongoose.model("Leave6", leaveSchema6);
-export default Leave6;
+const Leave7 = mongoose.model("Leave7", leaveSchema7);
+export default Leave7;
