@@ -17,6 +17,7 @@ import leaveRouter7  from './routes/leave7.js'
 import leaveRouter8  from './routes/leave8.js'
 import leaveRouter9  from './routes/leave9.js'
 import leaveRouter10  from './routes/leave10.js'
+import leaveRouter11  from './routes/leave11.js'
 
 import settingRouter from './routes/setting.js';
 import dashboardRouter from './routes/dashboard.js';
@@ -68,6 +69,7 @@ app.use('/api/leave7',leaveRouter7)
 app.use('/api/leave8',leaveRouter8)
 app.use('/api/leave9',leaveRouter9)
 app.use('/api/leave10',leaveRouter10)
+app.use('/api/leave11',leaveRouter11)
 
 app.use('/api/setting', settingRouter);
 app.use('/api/dashboard', dashboardRouter);
